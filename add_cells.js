@@ -109,6 +109,7 @@ myHex.addEventListener("keydown", event => {
       return;
     }
     ValidateHexColor(event);
+    ChangeUseHexBtn();
 });
 function ValidateHexColor(event){
     // If this is not a hexadecimal color value, don't allow this keypress
@@ -118,14 +119,17 @@ function ValidateHexColor(event){
         )){
         event.preventDefault();
     }
-    ChangeUseHexBtn();
 }
 
 myHex.addEventListener("change", ChangeUseHexBtn);
 myHex.addEventListener("blur", ChangeUseHexBtn);
+myHex.addEventListener("keyup", ChangeUseHexBtn);
 function ChangeUseHexBtn(){
-    if(!(document.getElementById("hexFillBtn").style.backgroundColor = "#" + myHex.value)){
-        document.getElementById("hexFillBtn").style.backgroundColor = "#949494";
+    if(myHex.value.length == 6){
+        document.getElementById("hexFillBtn").style.backgroundColor = "#" + myHex.value;
+    }
+    else{
+        document.getElementById("hexFillBtn").style.backgroundColor = "#969696";
     }
 }
 
@@ -135,4 +139,5 @@ function UseHexColor(){
     if(myHex.value.length == 6){
         cellColor = "#" + myHex.value;
     }
+    ChangeUseHexBtn();
 }
