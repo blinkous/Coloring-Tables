@@ -1,18 +1,27 @@
 body{
     font-family: sans-serif;
+    margin: 0;
+    background-color: rgb(236, 236, 236);
 }
 h1{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
+    font-weight: normal;
+}
+#headerContainer{
+    background: linear-gradient(to right, rgb(252, 251, 184) 0%, rgb(48, 171, 208) 50%, rgb(214, 152, 209) 100%);
+    padding-top: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
 }
 #heading{
-    background: linear-gradient(to right, rgb(252, 251, 184) 0%, rgb(48, 171, 208) 50%, rgb(214, 152, 209) 100%);
+    /* background: linear-gradient(to right, rgb(252, 251, 184) 0%, rgb(48, 171, 208) 50%, rgb(214, 152, 209) 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: white;
 }
 table{
-    border: 1px solid black;
     border-collapse: collapse;
     margin: auto;
 }
@@ -20,16 +29,13 @@ td{
     border: 1px solid rgb(187, 187, 187);
     width: 20px;
     height: 20px;
+    background-color: white;
 }
 #cellOptions{
-    margin: auto;
-    /* border: 1px solid black; */
-    width: 95%;
+    margin: 0;
     text-align: center;
-    background-color: rgb(236, 236, 236);
-    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
     padding: 10px 0;
-    margin-bottom: 30px;
 }
 button:hover{
     cursor: pointer;
@@ -45,11 +51,10 @@ input:focus, button:focus, select:focus{
     font-weight: bold;
 }
 .tableManip{
-    /* border: 5px solid white; */
     background-color: white;
+    color: #464646;
 }
 .tableManip:hover{
-    /* border: 5px solid rgb(185, 185, 185); */
     background-color: rgb(247, 247, 247);
 }
 #hexColor, #addAmt{
@@ -67,23 +72,31 @@ input:focus, button:focus, select:focus{
     background-color: #949494;
     color: white;
 }
-#eraseFillBtn, #clearFillBtn, #resetBtn{
+#clearFillBtn, #resetBtn{
     color: black;
+}
+#eraseFillBtn{
+    color: #e0b5d5;
 }
 #eraseFillBtn:hover, #clearFillBtn:hover, #resetBtn:hover{
     background-color: rgb(247, 247, 247);
 }
 
 /* Adding a gradient fill to the text */
-#addRowTxt, #addColTxt{
+#addRowTxt, #addColTxt, #deleteRowTxt, #deleteColTxt{
 	text-transform: uppercase;
-	background: linear-gradient(to right, rgb(208, 197, 48) 0%, rgb(165, 208, 48) 100%);
+	/* background: linear-gradient(to right, rgb(208, 197, 48) 0%, rgb(165, 208, 48) 100%);
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 }
-#deleteRowTxt, #deleteColTxt{
-	text-transform: uppercase;
-	background: linear-gradient(to right, rgb(195, 48, 208) 0%, rgb(208, 48, 48) 100%);
-	-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+#deleteRowBtn, #deleteColBtn, #addRowBtn, #addColBtn{
+    /* padding: 8px 2px; */
+}
+#addRowBtn, #addColBtn{
+    /* background: linear-gradient(to right, rgb(208, 197, 48) 0%, rgb(165, 208, 48) 100%); */
+}
+#deleteRowBtn, #deleteColBtn{
+	/* background: linear-gradient(to right, rgb(195, 48, 208) 0%, rgb(208, 48, 48) 100%); */
+	/* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }

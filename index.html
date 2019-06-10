@@ -2,31 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Rows & Columns</title>
   </head>
 
   <body>
-    <div class="container">
-        <h1><span id="heading">Rows & Columns</span></h1>
-        <div id="cellOptions">
-            <input type="text" placeholder="#" maxlength="2" id="addAmt"/>
-            <button id="addRowBtn" class="cellsBtn tableManip"><span id="addRowTxt">+ Row</span></button>
-            <button id="addColBtn" class="cellsBtn tableManip"><span id="addColTxt">+ Column</span></button>
-            <button id="deleteRowBtn" class="cellsBtn tableManip"><span id="deleteRowTxt">- Row</span></button>
-            <button id="deleteColBtn" class="cellsBtn tableManip"><span id="deleteColTxt">- Column</span></button>
-            <select id="colorOptions">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-            <input type="text" placeholder="HEX Color" maxlength="6" id="hexColor"/>
-            <button id="hexFillBtn" class="cellsBtn"><span id="hexFillTxt">Use Hex</span></button>
-            <button id="eraseFillBtn" class="cellsBtn"><span id="eraseFillTxt">Erase</span></button>
-            <button id="clearFillBtn" class="cellsBtn"><span id="clearFillTxt">Clear Fill</span></button>
-            <button id="resetBtn" class="cellsBtn"><span id="resetTxt">Reset</span></button>
+    <div>
+        <div id="headerContainer">
+            <h1><span id="heading">Rows & Columns</span></h1>
+            <div id="cellOptions">
+                <input type="text" placeholder="#" maxlength="2" id="addAmt"/>
+                <button id="addRowBtn" class="cellsBtn tableManip"><span id="addRowTxt">+ Row</span></button>
+                <button id="addColBtn" class="cellsBtn tableManip"><span id="addColTxt">+ Column</span></button>
+                <button id="deleteRowBtn" class="cellsBtn tableManip"><span id="deleteRowTxt">- Row</span></button>
+                <button id="deleteColBtn" class="cellsBtn tableManip"><span id="deleteColTxt">- Column</span></button>
+                <select id="colorOptions">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <input type="text" placeholder="HEX Color" maxlength="6" id="hexColor" value="b5e0d9"/>
+                <button id="hexFillBtn" class="cellsBtn"><span id="hexFillTxt">Use Hex</span></button>
+                <button id="eraseFillBtn" class="cellsBtn"><span id="eraseFillTxt">Erase</span></button>
+                <button id="clearFillBtn" class="cellsBtn"><span id="clearFillTxt">Clear Fill</span></button>
+                <button id="resetBtn" class="cellsBtn"><span id="resetTxt">Reset</span></button>
+            </div>
         </div>
         <table>
             <tr>

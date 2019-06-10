@@ -6,6 +6,7 @@ let isEraserOn = false;
 
 // Add Row
 document.getElementById("addRowBtn").addEventListener("click", function(){
+    // Add at least one row, and if there is a value in the # of rows/cols to add, add more
     let j = 0;
     do{
         AddRow();
@@ -24,6 +25,7 @@ function AddRow(){
 
 // Add Column
 document.getElementById("addColBtn").addEventListener("click", function(){
+    // Add at least one col, and if there is a value in the # of rows/cols to add, add more
     let j = 0;
     do{
         AddCol();
@@ -80,17 +82,22 @@ function ColorMe(e){
 }
 
 // Erase the fill of selected cells
-document.getElementById("eraseFillBtn").addEventListener("click", EraseFill);
+let eraseBtn = document.getElementById("eraseFillBtn")
+eraseBtn.addEventListener("click", EraseFill);
 function EraseFill(){
     if(isEraserOn){
         setColor();
         isEraserOn = false;
         myTable.style.cursor = "default";
+        eraseBtn.style.color = "#e0b5d5";
+        eraseBtn.style.backgroundColor = "white";
     }
     else{
         cellColor = "white";
         myTable.style.cursor = "pointer";
         isEraserOn = true;
+        eraseBtn.style.backgroundColor = "#e0b5d5";
+        eraseBtn.style.color = "white";
     }
 }
 
