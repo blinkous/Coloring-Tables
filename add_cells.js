@@ -65,6 +65,7 @@ document.addEventListener("click", function(e){
 });
 function ColorMe(e){
     e.target.style.backgroundColor = cellColor;
+    // e.target.style.borderColor = cellColor;
 }
 
 // Erase the fill of selected cells
@@ -85,7 +86,6 @@ function EraseFill(){
 // Clear the fill of the entire table
 document.getElementById("clearFillBtn").addEventListener("click", ClearFill);
 function ClearFill(){
-    // document.getElementsByTagName("td").style.backgroundColor = "white";
     $("td").css("background-color","white");
 }
 
@@ -117,5 +117,22 @@ function ValidateHexColor(event){
         (event.keyCode >= 65 && event.keyCode <= 90)      
         )){
         event.preventDefault();
+    }
+    ChangeUseHexBtn();
+}
+
+myHex.addEventListener("change", ChangeUseHexBtn);
+myHex.addEventListener("blur", ChangeUseHexBtn);
+function ChangeUseHexBtn(){
+    if(!(document.getElementById("hexFillBtn").style.backgroundColor = "#" + myHex.value)){
+        document.getElementById("hexFillBtn").style.backgroundColor = "#949494";
+    }
+}
+
+// Use the hex color the user input
+document.getElementById("hexFillBtn").addEventListener("click", UseHexColor);
+function UseHexColor(){
+    if(myHex.value.length == 6){
+        cellColor = "#" + myHex.value;
     }
 }

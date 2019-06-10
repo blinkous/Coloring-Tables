@@ -11,20 +11,22 @@
   <body>
     <div class="container">
         <h1>Rows & Columns</h1>
-        <button id="addRowBtn" class="cellsBtn">Add a Row</button>
-        <button id="addColBtn" class="cellsBtn">Add a Column</button>
-        <button id="deleteRowBtn" class="cellsBtn">Delete a Row</button>
-        <button id="deleteColBtn" class="cellsBtn">Delete a Column</button>
-        <select id="colorOptions">
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="userInput"></option>
-        </select>
-        <input type="text" placeholder="Enter HEX Color" maxlength="6" id="hexColor"/>
-        <button id="eraseFillBtn" class="cellsBtn">Erase</button>
-        <button id="clearFillBtn" class="cellsBtn">Clear Fill</button>
-        <button id="resetBtn" class="cellsBtn">Reset</button>
+        <div id="cellOptions">
+            <button id="addRowBtn" class="cellsBtn">+ Row</button>
+            <button id="addColBtn" class="cellsBtn">+ Column</button>
+            <button id="deleteRowBtn" class="cellsBtn">- Row</button>
+            <button id="deleteColBtn" class="cellsBtn">- Column</button>
+            <select id="colorOptions">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+            <input type="text" placeholder="HEX Color" maxlength="6" id="hexColor"/>
+            <button id="hexFillBtn" class="cellsBtn">Use Hex</button>
+            <button id="eraseFillBtn" class="cellsBtn">Erase</button>
+            <button id="clearFillBtn" class="cellsBtn">Clear Fill</button>
+            <button id="resetBtn" class="cellsBtn">Reset</button>
+        </div>
         <table>
             <tr>
                 <td></td>

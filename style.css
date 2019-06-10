@@ -11,3 +11,46 @@ td{
     height: 20px;
     /* background-color: brown; */
 }
+#hexColor{
+    width: 60px;
+}
+#cellOptions{
+    margin: auto;
+    /* border: 1px solid black; */
+    /* width: 700px;     */
+}
+.cellsBtn{
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 90%;
+    font-weight: bold;
+    color: white;
+}
+button:hover{
+    cursor: pointer;
+}
+input:focus, button:focus{
+    outline: none;
+}
+input:active, button:active{
+    outline: none;
+}
+#addRowBtn, #addColBtn{
+    background-color: #9be900;
+}
+#deleteRowBtn, #deleteColBtn{
+    background-color: #ee0077;
+}
+#hexFillBtn{
+    background-color: #949494;
+}
+#eraseFillBtn{
+    background-color: #000;
+}
+#clearFillBtn{
+    background-color: #000;
+}
+#resetBtn{
+    background-color: #000;
+}
