@@ -1,0 +1,13 @@
+body{
+    font-family: sans-serif;
+}
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    /* background-color: brown; */
+}
