@@ -101,3 +101,21 @@ function ResetTable(){
     }
     ClearFill();
 }
+
+// Validating the hex color on keydown
+let myHex = document.getElementById("hexColor");
+myHex.addEventListener("keydown", event => {
+    if (event.isComposing || event.keyCode === 229) {
+      return;
+    }
+    ValidateHexColor(event);
+});
+function ValidateHexColor(event){
+    // If this is not a hexadecimal color value, don't allow this keypress
+    if(!(
+        (event.keyCode > 0 && event.keyCode <= 57) || 
+        (event.keyCode >= 65 && event.keyCode <= 90)      
+        )){
+        event.preventDefault();
+    }
+}
