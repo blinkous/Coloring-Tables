@@ -24,52 +24,58 @@ td{
     padding: 10px 0;
     margin-bottom: 30px;
 }
+button:hover{
+    cursor: pointer;
+}
+input:focus, button:focus, select:focus{
+    outline: none;
+}
 .cellsBtn, input{
     border: none;
     padding: 10px;
     border-radius: 50px;
-    font-size: 90%;
+    font-size: 100%;
     font-weight: bold;
-    color: white;
+}
+.tableManip{
+    /* border: 5px solid white; */
+    background-color: white;
+}
+.tableManip:hover{
+    /* border: 5px solid rgb(185, 185, 185); */
+    background-color: rgb(247, 247, 247);
 }
 #hexColor{
     color: black;
     border: 1px solid rgb(170, 170, 170);
-    width: 75px;
+    width: 80px;
 }
 #hexColor::placeholder{
-    color: rgb(209, 209, 209);
-}
-button:hover{
-    cursor: pointer;
-}
-input:focus, button:focus{
-    outline: none;
-}
-input:active, button:active{
-    outline: none;
-}
-#addRowBtn, #addColBtn{
-    /* background-color: #9be900; */
-    color: #9bb92c;
-}
-#deleteRowBtn, #deleteColBtn{
-    /* background-color: #ee0077; */
-    color: #ee0077;
+    color: rgb(231, 231, 231);
 }
 #hexFillBtn{
     background-color: #949494;
-    /* color: #949494; */
+    color: white;
 }
-#eraseFillBtn{
-    /* background-color: #000; */
+#eraseFillBtn, #clearFillBtn, #resetBtn{
     color: #000;
+    /* background: linear-gradient(to right, #30CFD0 0%, #330867 100%); */
 }
-#clearFillBtn{
-    /* background-color: #000; */
-    color: #000;
+#eraseFillBtn:hover, #clearFillBtn:hover, #resetBtn:hover{
+    background-color: rgb(247, 247, 247);
 }
-#resetBtn{
-    /* background-color: #000; */
-    color: #000;
+
+/* Adding a gradient fill to the text */
+#addRowTxt, #addColTxt{
+    /* width: 400px; */
+	text-transform: uppercase;
+	background: linear-gradient(to right, rgb(208, 197, 48) 0%, rgb(165, 208, 48) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#deleteRowTxt, #deleteColTxt{
+	text-transform: uppercase;
+	background: linear-gradient(to right, rgb(195, 48, 208) 0%, rgb(208, 48, 48) 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
