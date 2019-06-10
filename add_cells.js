@@ -5,7 +5,13 @@ let cellColor = "red";
 let isEraserOn = false;
 
 // Add Row
-document.getElementById("addRowBtn").addEventListener("click", AddRow);
+document.getElementById("addRowBtn").addEventListener("click", function(){
+    let j = 0;
+    do{
+        AddRow();
+        j++;
+    } while(j < document.getElementById("addAmt").value);
+});
 function AddRow(){
     let tr = document.createElement("tr");
     for(let i = 0; i < numCols; i++){
@@ -17,7 +23,13 @@ function AddRow(){
 }
 
 // Add Column
-document.getElementById("addColBtn").addEventListener("click", AddCol);
+document.getElementById("addColBtn").addEventListener("click", function(){
+    let j = 0;
+    do{
+        AddCol();
+        j++;
+    } while(j < document.getElementById("addAmt").value);
+});
 function AddCol(){
     let trs = document.getElementsByTagName("tr");
     let td = document.createElement("td");
@@ -38,7 +50,6 @@ function DeleteCol(){
             tr.removeChild(tr.lastChild);
         }
         numCols--;
-        console.log("deleted col");
     }
 }
 
@@ -101,6 +112,13 @@ function ResetTable(){
     }
     ClearFill();
 }
+
+// Accept only numbers in the number of rows/columns to add
+document.getElementById("addAmt").addEventListener("keydown", event =>{
+    if(!(event.keyCode > 0 && event.keyCode <= 57)){
+        event.preventDefault();
+    }
+});
 
 // Validating the hex color on keydown
 let myHex = document.getElementById("hexColor");

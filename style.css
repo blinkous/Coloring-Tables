@@ -3,6 +3,13 @@ body{
 }
 h1{
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#heading{
+    background: linear-gradient(to right, rgb(252, 251, 184) 0%, rgb(48, 171, 208) 50%, rgb(214, 152, 209) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 table{
     border: 1px solid black;
@@ -45,12 +52,15 @@ input:focus, button:focus, select:focus{
     /* border: 5px solid rgb(185, 185, 185); */
     background-color: rgb(247, 247, 247);
 }
-#hexColor{
+#hexColor, #addAmt{
     color: black;
     border: 1px solid rgb(170, 170, 170);
     width: 80px;
 }
-#hexColor::placeholder{
+#addAmt{
+    width: 20px;
+}
+#hexColor::placeholder, #addAmt::placeholder{
     color: rgb(231, 231, 231);
 }
 #hexFillBtn{
@@ -58,8 +68,7 @@ input:focus, button:focus, select:focus{
     color: white;
 }
 #eraseFillBtn, #clearFillBtn, #resetBtn{
-    color: #000;
-    /* background: linear-gradient(to right, #30CFD0 0%, #330867 100%); */
+    color: black;
 }
 #eraseFillBtn:hover, #clearFillBtn:hover, #resetBtn:hover{
     background-color: rgb(247, 247, 247);
@@ -67,7 +76,6 @@ input:focus, button:focus, select:focus{
 
 /* Adding a gradient fill to the text */
 #addRowTxt, #addColTxt{
-    /* width: 400px; */
 	text-transform: uppercase;
 	background: linear-gradient(to right, rgb(208, 197, 48) 0%, rgb(165, 208, 48) 100%);
 	-webkit-background-clip: text;
