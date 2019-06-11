@@ -3,6 +3,7 @@ let numRows = 1;
 let numCols = 1;
 let cellColor = "red";
 let isEraserOn = false;
+let usingHexColor = false;
 
 // Add Row
 document.getElementById("addRowBtn").addEventListener("click", function(){
@@ -64,10 +65,23 @@ function DeleteRow(){
     }
 }
 
-document.getElementById("colorOptions").addEventListener("change", setColor);
+document.getElementById("colorOptions").addEventListener("change", function(){
+    usingHexColor = false;
+    setColor();
+});
+document.getElementById("colorOptions").addEventListener("click", function(){
+    usingHexColor = false;
+    setColor();
+});
 // When a new color is selected, change the cell fill color
 function setColor(){
-    cellColor = colorOptions.options[colorOptions.selectedIndex].value;
+    if(usingHexColor){
+        UseHexColor();    
+    }
+    else{
+        cellColor = colorOptions.options[colorOptions.selectedIndex].value;
+        usingHexColor = false;
+    }
 }
 
 // Adding the ability to color td cells
@@ -165,4 +179,5 @@ function UseHexColor(){
         cellColor = "#" + myHex.value;
     }
     ChangeUseHexBtn();
+    usingHexColor = true;
 }
