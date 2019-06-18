@@ -1,4 +1,4 @@
-### Pixel Coloring with Tables
+## Pixel Coloring with Tables
 # Description
 A pixel coloring web app that uses tables, JavaScript and jQuery.
 
