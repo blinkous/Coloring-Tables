@@ -1,8 +1,8 @@
-## Pixel Coloring with Tables
-# Description
+# Pixel Coloring with Tables
+## Description
 A pixel coloring web app that uses tables, JavaScript and jQuery.
 
-# Features Implemented
+## Features Implemented
 - Adding rows and columns
 - Deleting rows and columns
 - Change color using a dropdown
@@ -11,5 +11,5 @@ A pixel coloring web app that uses tables, JavaScript and jQuery.
 - Erase fill from all cells
 - Reset the table
 
-# Walkthrough
+## Gif Walkthrough
 <img src="https://i.imgur.com/De1uhEK.gif">
